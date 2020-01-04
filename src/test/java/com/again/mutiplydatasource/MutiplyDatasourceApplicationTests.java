@@ -1,5 +1,6 @@
 package com.again.mutiplydatasource;
 
+import com.again.mutiplydatasource.core.HelloWord;
 import com.again.mutiplydatasource.dao.ds1.DemoOneMapper;
 import com.again.mutiplydatasource.dao.ds2.DemoTwoMapper;
 import com.again.mutiplydatasource.domain.ds1.DemoOne;
@@ -26,6 +27,8 @@ class MutiplyDatasourceApplicationTests {
     @Autowired
     private TestService testService;
 
+    @Autowired
+    private HelloWord helloWord;
 
     /**
      * 插入两条数据，然后抛出异常，然后查询这两条数据是插入
@@ -40,5 +43,13 @@ class MutiplyDatasourceApplicationTests {
         System.out.println(demoOneMapper.selectByPrimaryKey(id));
         System.out.println(demoTwoMapper.selectByPrimaryKey(id));
         Assert.assertTrue(demoOneMapper.selectByPrimaryKey(id) == null && demoTwoMapper.selectByPrimaryKey(id) == null);
+    }
+
+
+    @Test
+    public void manualAddBeanTest(){
+        System.out.println(helloWord.say());
+        Assert.assertTrue(helloWord != null);
+
     }
 }
