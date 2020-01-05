@@ -17,7 +17,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import javax.sql.DataSource;
 import java.util.Map;
 
-@Configuration
+//@Configuration
 public class DataSourceConfig2 implements EnvironmentAware {
 
     String ds_key = "ds2";

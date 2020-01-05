@@ -25,10 +25,11 @@ import java.util.Map;
 /**
  * 多数据源配置类： 配置第一个数据源
  */
-@Configuration
+
 /**
  *  配置dao类的位置以及
  */
+//@Configuration  // 这里关掉配置功能，改用core包下的自动注册bean的功能，这两种方法都是可以的
 public class DataSourceConfig implements EnvironmentAware {
 
     String ds_key = "ds1";

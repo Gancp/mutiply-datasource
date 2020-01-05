@@ -1,10 +1,8 @@
 package com.again.mutiplydatasource;
 
-import com.again.mutiplydatasource.core.HelloWord;
+import com.again.mutiplydatasource.service.HelloWord;
 import com.again.mutiplydatasource.dao.ds1.DemoOneMapper;
 import com.again.mutiplydatasource.dao.ds2.DemoTwoMapper;
-import com.again.mutiplydatasource.domain.ds1.DemoOne;
-import com.again.mutiplydatasource.domain.ds2.DemoTwo;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -17,7 +15,7 @@ import java.util.Random;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {MutiplyDatasourceApplication.class})
 class MutiplyDatasourceApplicationTests {
-    public static int id = new Random(100).nextInt();
+    public static int id = Math.abs(new Random(100).nextInt());
     @Autowired
     private DemoOneMapper demoOneMapper;
 
@@ -34,22 +32,27 @@ class MutiplyDatasourceApplicationTests {
      * 插入两条数据，然后抛出异常，然后查询这两条数据是插入
      */
     @Test
-    public void tes2() {
+    public void testJTAIsUseful() {
         try {
             testService.rollbackDTwo();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(demoOneMapper.selectByPrimaryKey(id));
-        System.out.println(demoTwoMapper.selectByPrimaryKey(id));
+        System.out.println(String.format("数据库查看下id:%s的数据是否存在", id));
+        System.out.println("demoOne is " + demoOneMapper.selectByPrimaryKey(id));
+        System.out.println("demoTwo is " + demoTwoMapper.selectByPrimaryKey(id));
         Assert.assertTrue(demoOneMapper.selectByPrimaryKey(id) == null && demoTwoMapper.selectByPrimaryKey(id) == null);
     }
 
 
+    /**
+     * 测试是否可以手动注册bean
+     */
     @Test
-    public void manualAddBeanTest(){
+    public void manualAddBeanTest() {
+        // add a Hellworld Bean by  DataSourceRegistry.postProcessBeanDefinitionRegistry  method , then test it can be retrieval
         System.out.println(helloWord.say());
-        Assert.assertTrue(helloWord != null);
+        Assert.assertTrue("hello heieigan".equals(helloWord.say()));
 
     }
 }
