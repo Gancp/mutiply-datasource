@@ -1,3 +1,4 @@
+
 # mutiply-datasource
 mybatis的多数据源配置，以及支持JTA全局事务
 
@@ -34,3 +35,5 @@ alter table mtds_test2.demo2
 
 
 2.实体包，dao包和mapperXMl文件的包一定要按照数据源的名称区分
+
+参考了这位作者的思路,感谢:https://github.com/louislivi/fastdep
