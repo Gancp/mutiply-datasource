@@ -36,4 +36,6 @@ alter table mtds_test2.demo2
 
 2.实体包，dao包和mapperXMl文件的包一定要按照数据源的名称区分
 
-参考了这位作者的思路,感谢:https://github.com/louislivi/fastdep
+鸣谢:参考了这位作者的思路,https://github.com/louislivi/fastdep
+
+修改: 修改为使用自动注册bean, 不需要繁琐的手工编写bean
