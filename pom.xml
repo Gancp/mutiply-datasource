@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.again</groupId>
-    <artifactId>mutiply-datasource</artifactId>
+    <artifactId>multiply-datasource</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mutiply-datasource</name>
+    <name>multiply-datasource</name>
     <description>多数据源项目</description>
 
     <properties>

@@ -1,8 +1,9 @@
 package com.again.mutiplydatasource;
 
-import com.again.mutiplydatasource.service.HelloWord;
-import com.again.mutiplydatasource.dao.ds1.DemoOneMapper;
-import com.again.mutiplydatasource.dao.ds2.DemoTwoMapper;
+import com.again.multiplydatasource.MutiplyDatasourceApplication;
+import com.again.multiplydatasource.service.HelloWord;
+import com.again.multiplydatasource.dao.ds1.DemoOneMapper;
+import com.again.multiplydatasource.dao.ds2.DemoTwoMapper;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

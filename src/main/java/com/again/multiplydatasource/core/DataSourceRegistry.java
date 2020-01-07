@@ -1,6 +1,6 @@
-package com.again.mutiplydatasource.core;
+package com.again.multiplydatasource.core;
 
-import com.again.mutiplydatasource.service.HelloWord;
+import com.again.multiplydatasource.service.HelloWord;
 import com.alibaba.druid.pool.xa.DruidXADataSource;
 import com.atomikos.jdbc.AtomikosDataSourceBean;
 import org.apache.ibatis.session.SqlSessionFactory;

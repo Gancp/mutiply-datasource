@@ -1,19 +1,12 @@
-package com.again.mutiplydatasource;
+package com.again.multiplydatasource;
 
-import com.again.mutiplydatasource.core.DataSourceRegistry;
-import com.again.mutiplydatasource.core.JTAConfig;
-import com.atomikos.icatch.jta.UserTransactionImp;
-import com.atomikos.icatch.jta.UserTransactionManager;
+import com.again.multiplydatasource.core.JTAConfig;
+import com.again.multiplydatasource.core.DataSourceRegistry;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.Primary;
-import org.springframework.transaction.jta.JtaTransactionManager;
-
-import javax.transaction.UserTransaction;
 
 /**
  * 多数据源测试

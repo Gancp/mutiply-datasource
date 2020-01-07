@@ -1,6 +1,6 @@
-package com.again.mutiplydatasource.domain.ds2;
+package com.again.multiplydatasource.domain.ds1;
 
-public class DemoTwo {
+public class DemoOne {
     private Integer id;
 
     private String mark;
@@ -23,7 +23,7 @@ public class DemoTwo {
 
     @Override
     public String toString() {
-        return "DemoTwo{" +
+        return "DemoOne{" +
                 "id=" + id +
                 ", mark='" + mark + '\'' +
                 '}';

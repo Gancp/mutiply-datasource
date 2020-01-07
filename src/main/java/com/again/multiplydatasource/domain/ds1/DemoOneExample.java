@@ -1,4 +1,4 @@
-package com.again.mutiplydatasource.domain.ds1;
+package com.again.multiplydatasource.domain.ds1;
 
 import java.util.ArrayList;
 import java.util.List;

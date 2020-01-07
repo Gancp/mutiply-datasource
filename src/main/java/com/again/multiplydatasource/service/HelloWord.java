@@ -1,4 +1,4 @@
-package com.again.mutiplydatasource.service;
+package com.again.multiplydatasource.service;
 
 public class HelloWord {
     private String name = "again";

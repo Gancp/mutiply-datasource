@@ -1,9 +1,9 @@
 package com.again.mutiplydatasource;
 
-import com.again.mutiplydatasource.dao.ds1.DemoOneMapper;
-import com.again.mutiplydatasource.dao.ds2.DemoTwoMapper;
-import com.again.mutiplydatasource.domain.ds1.DemoOne;
-import com.again.mutiplydatasource.domain.ds2.DemoTwo;
+import com.again.multiplydatasource.dao.ds1.DemoOneMapper;
+import com.again.multiplydatasource.dao.ds2.DemoTwoMapper;
+import com.again.multiplydatasource.domain.ds1.DemoOne;
+import com.again.multiplydatasource.domain.ds2.DemoTwo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

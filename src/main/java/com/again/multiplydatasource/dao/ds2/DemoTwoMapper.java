@@ -1,7 +1,7 @@
-package com.again.mutiplydatasource.dao.ds2;
+package com.again.multiplydatasource.dao.ds2;
 
-import com.again.mutiplydatasource.domain.ds2.DemoTwo;
-import com.again.mutiplydatasource.domain.ds2.DemoTwoExample;
+import com.again.multiplydatasource.domain.ds2.DemoTwo;
+import com.again.multiplydatasource.domain.ds2.DemoTwoExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
